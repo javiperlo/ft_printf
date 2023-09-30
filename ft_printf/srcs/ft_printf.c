@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:50:23 by javperez          #+#    #+#             */
-/*   Updated: 2023/09/30 18:49:48 by javperez         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:31:12 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	typeof_element(char type, va_list ap)
 		ft_putstr(va_arg(ap, char *));
 	else if (type == 'd')
 		ft_putdigit((long)va_arg(ap, int), 10, symbols);
+	else if (type == 'u')
+		ft_putdigit((long)va_arg(ap, unsigned int), 10, symbols);
 	else if (type == 'x')
 		ft_putdigit((long)va_arg(ap, unsigned int), 16, symbols);
 	else if (type == 'X')
@@ -30,8 +32,12 @@ char	typeof_element(char type, va_list ap)
 		symbols = "0123456789ABCDEF";
 		ft_putdigit((long)va_arg(ap, unsigned int), 16, symbols);
 	}
-	else if (type == '%')
-		ft_putchar(va_arg(ap, int));
+	else if (type == 'i')
+		ft_putdigit((long)(va_arg(ap, int)), 10, symbols);
+	else if (type == 'p')
+		ft_putpointer((long)(va_arg(ap, unsigned int)), 16, symbols);
+	else
+		write(1, &type, 1);
 	return (0);
 }
 

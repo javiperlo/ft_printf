@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:41:46 by javperez          #+#    #+#             */
-/*   Updated: 2023/09/30 18:23:29 by javperez         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:37:24 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	ft_putstr(char *str)
 {
+	if (!str)
+		write(1, "(null)",6);
 	while (*str != '\0')
 	{
 		write(1, &*str, 1);
