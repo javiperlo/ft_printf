@@ -1,50 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   typeofvariable.c                                   :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:50:23 by javperez          #+#    #+#             */
-/*   Updated: 2023/09/30 14:06:08 by javperez         ###   ########.fr       */
+/*   Updated: 2023/09/30 18:49:48 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdarg.h>
-
-int	ft_putchar(int c)
-{
-	return (write (1, &c, 1));
-}
-
-char	ft_putstr(char *str)
-{
-	while (*str != '\0')
-	{
-		write(1, &*str, 1);
-		str ++;
-	}
-	return (0);
-}
-
-int	ft_putdigit(long num, int base, char *symbols)
-{
-	if (num < 0)
-	{
-		write (1, "-", 1);
-		return (ft_putdigit(-num, base, symbols) - 1);
-	}
-	else if (num < base)
-		return (ft_putchar(symbols[num]));
-	else
-	{
-		ft_putdigit(num / base, base, symbols);
-		return (ft_putdigit(num % base, base, symbols));
-	}
-	return (0);
-}
+#include "ft_printf.h"
 
 char	typeof_element(char type, va_list ap)
 {
@@ -69,7 +35,7 @@ char	typeof_element(char type, va_list ap)
 	return (0);
 }
 
-int	my_printf(char const *str, ...)
+int	ft_printf(char const *str, ...)
 {
 	int		i;
 	va_list	ap;
@@ -90,12 +56,6 @@ int	my_printf(char const *str, ...)
 	}
 	va_end (ap);
 	return (i);
-}
-
-int	main(void)
-{
-	my_printf("My -> Numero %x\n", -1);
-	printf("Or -> Numero %p\n", (void *)-2);
 }
 
 /**
