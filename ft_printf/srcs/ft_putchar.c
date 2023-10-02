@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:37:17 by javperez          #+#    #+#             */
-/*   Updated: 2023/09/30 18:24:08 by javperez         ###   ########.fr       */
+/*   Updated: 2023/10/02 12:45:01 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_putchar(int c)
 {
-	write (1, &c ,1);
+	write (1, &c, 1);
 	return (1);
 }
