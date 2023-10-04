@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:50:23 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/02 20:23:15 by javperez         ###   ########.fr       */
+/*   Updated: 2023/10/04 20:38:11 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	typeof_element(char type, va_list ap)
 	else if (type == 'i')
 		count += ft_putdigitx((long)(va_arg(ap, int)), 10);
 	else if (type == 'p')
-		count += ft_putpointer((long)(va_arg(ap, unsigned long)), 16);
+		count += ft_putpoi(va_arg(ap, unsigned long long));
 	else
 		count += write(1, &type, 1);
 	return (count);
@@ -53,7 +53,7 @@ int	ft_printf(char const *str, ...)
 			str++;
 		}
 		else
-			count += ft_putchar(*str);
+			count += write(1, str, 1);
 		str ++;
 	}
 	va_end (ap);
