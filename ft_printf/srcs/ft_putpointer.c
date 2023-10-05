@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 19:03:55 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/04 20:43:03 by javperez         ###   ########.fr       */
+/*   Updated: 2023/10/05 22:27:08 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_putpoi(unsigned long long num)
 	len = 0;
 	if (num == 0)
 	{
-		len = len + write (1, "(nil)", 5);
+		len = len + write (1, "0x0", 3);
 		return (len);
 	}
 	len = write (1, "0x", 2);
