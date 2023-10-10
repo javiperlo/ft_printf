@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:39:09 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/05 22:30:16 by javperez         ###   ########.fr       */
+/*   Updated: 2023/10/10 14:46:57 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 # include "../libft/libft.h"
 
 int		ft_putchar(int c);
-char	ft_putstr(char *str);
+int		ft_putstr(char *str);
 int		ft_putdigitx(long num, int base);
 int		ft_putdigit_mayuscx(long num, int base);
 int		ft_printf(char const *str, ...);
 int		ft_putpoi(unsigned long long prt);
-char	typeof_element(char type, va_list ap);
+int		typeof_element(char type, va_list ap);
 
 #endif

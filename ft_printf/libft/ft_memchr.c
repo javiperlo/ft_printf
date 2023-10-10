@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 11:39:21 by javperez          #+#    #+#             */
-/*   Updated: 2023/09/28 12:03:19 by javperez         ###   ########.fr       */
+/*   Updated: 2023/10/03 13:40:03 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	s = (char *)str;
 	while (i < n)
 	{
-		if ((s[i] == (char)c))
+		if (s[i] == (char)c)
 			return (&s[i]);
 		i ++;
 	}
