@@ -6,11 +6,25 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:42:50 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/04 20:46:43 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/04 13:55:07 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/**
+ * ft_putdigitx - Print an integer in a 
+ * specified base (lowercase hexadecimal).
+ *
+ * This function prints an integer in the specified 
+ * base (base 10 or base 16) using
+ * lowercase hexadecimal characters.
+ *
+ * @param num - The integer to be printed.
+ * @param base - The base to use for printing (e.g., 10
+ * for decimal or 16 for hexadecimal).
+ * @return The number of characters printed.
+ */
 
 int	ft_putdigitx(long num, int base)
 {
@@ -34,6 +48,19 @@ int	ft_putdigitx(long num, int base)
 	}
 	return (count);
 }
+/**
+ * ft_putdigit_mayuscx - Print an integer in a
+ * specified base (uppercase hexadecimal).
+ *
+ * This function prints an integer in the
+ * specified base (base 10 or base 16) using
+ * uppercase hexadecimal characters.
+ *
+ * @param num - The integer to be printed.
+ * @param base - The base to use for printing (e.g., 10
+ * for decimal or 16 for hexadecimal).
+ * @return The number of characters printed.
+ */
 
 int	ft_putdigit_mayuscx(long num, int base)
 {

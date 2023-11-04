@@ -6,26 +6,23 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 18:25:26 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/10 14:47:39 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/04 13:21:05 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "ft_printf.h"
 
-/*int	main(void)
+int	main(void)
 {
-	char    *s2 = "Mussum Ipsum, cacilds vidis litro abert
-	is. Posuere libero varius. Nullam a nisl ut ante blandit
-	 hendrerit. Aenean sit amet nisi. Atir
-	 ei o pau no gatis, per gatis num morreus.";
+	char    *s2 = "Hola que tal";
 	int		count;
 	int		count2;
 	//long num = -23;" %s %s %s %s %s", "-", "", "-", "p", str
-	count = ft_printf(" %s %s %s %s %s", " - ", "", "4", "", s2);
+	count = ft_printf(" %s %s %s %s %s %p", " - ", "", "4", "", s2, s2);
 	ft_printf ("\nThe chars written are: %d\n", count);
-	count2 = printf (" %s %s %s %s %s", " - ", "", "4", "", s2);
+	count2 = printf (" %s %s %s %s %s %p", " - ", "", "4", "", s2, s2);
 	printf("\nThe chars written are: %d\n", count2);
-	*/
 	/*ft_printf("Hola que tal, %s\n", str);
 	ft_printf("Tienes %d años\n", -20);
 	ft_printf("Tu caracter favorito es: %%\n");

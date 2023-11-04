@@ -6,11 +6,21 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:41:46 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/10 14:48:30 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/04 13:54:13 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/**
+ * ft_putstr - Print a string to the standard output.
+ *
+ * This function prints a string to the standard output character by character.
+ * If the input string is NULL, it prints "(null)" instead.
+ *
+ * @param str - The string to be printed.
+ * @return The number of characters printed (excluding the null terminator).
+ */
 
 int	ft_putstr(char *str)
 {

@@ -6,11 +6,20 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:37:17 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/02 12:45:01 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/04 13:22:26 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/**
+ * ft_putchar - Print a character
+ *
+ * This function writes a single character to the standard output using write()
+ *
+ * @param c - The character to be printed.
+ * @return The number of characters written (always 1).
+ */
 
 int	ft_putchar(int c)
 {

@@ -6,13 +6,24 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 19:03:55 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/05 22:27:08 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/04 13:54:25 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_countpoi(unsigned long long num)
+/**
+ * ft_countpoi - Count the number of digits in 
+ * a hexadecimal representation of a pointer.
+ *
+ * This function counts the number of digits required to represent a pointer in
+ * hexadecimal format.
+ *
+ * @param num - The unsigned long integer representing the pointer value.
+ * @return The count of hexadecimal digits in the pointer representation.
+ */
+
+int	ft_countpoi(unsigned long num)
 {
 	int	count;
 
@@ -24,12 +35,16 @@ int	ft_countpoi(unsigned long long num)
 	}
 	return (count);
 }
-
 /**
- * Esta función cuenta los dígitos en
- * hexadecimal del número entero. Y los retorna
-*/
-int	ft_putpointer(unsigned long long num)
+ * ft_putpointer - Print a pointer in hexadecimal format.
+ *
+ * This function prints an unsigned long integer (pointer) in hexadecimal format.
+ *
+ * @param num - The unsigned long integer representing the pointer value.
+ * @return The number of characters printed.
+ */
+
+int	ft_putpointer(unsigned long num)
 {
 	if (num >= 16)
 	{
@@ -45,8 +60,16 @@ int	ft_putpointer(unsigned long long num)
 	}
 	return (ft_countpoi(num));
 }
+/**
+ * ft_putpoi - Print a pointer with a "0x" prefix in hexadecimal format.
+ *
+ * This function prints a pointer with a "0x" prefix in hexadecimal format.
+ *
+ * @param num - The unsigned long integer representing the pointer value.
+ * @return The number of characters printed.
+ */
 
-int	ft_putpoi(unsigned long long num)
+int	ft_putpoi(unsigned long num)
 {
 	int		len;
 
