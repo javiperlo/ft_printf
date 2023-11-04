@@ -6,11 +6,22 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:50:23 by javperez          #+#    #+#             */
-/*   Updated: 2023/10/10 14:44:36 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/04 13:13:39 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/**
+ * typeof_element - Determine the type of format specifier and handle it.
+ *
+ * This function processes the format specifier and corresponding arguments
+ * and performs the appropriate action based on the specifier type.
+ *
+ * @param type - The format specifier character.
+ * @param ap - A va_list containing the variable arguments.
+ * @return The number of characters processed.
+ */
 
 int	typeof_element(char type, va_list ap)
 {
@@ -32,11 +43,22 @@ int	typeof_element(char type, va_list ap)
 	else if (type == 'i')
 		count += ft_putdigitx((long)(va_arg(ap, int)), 10);
 	else if (type == 'p')
-		count += ft_putpoi(va_arg(ap, unsigned long long));
+		count += ft_putpoi(va_arg(ap, unsigned long));
 	else
 		count += write(1, &type, 1);
 	return (count);
 }
+
+/**
+ * ft_printf - A custom printf function.
+ *
+ * This function emulates the behavior of
+ * printf for a subset of format specifiers.
+ *
+ * @param str - The format string.
+ * @param ... - Variable arguments depending on format specifiers.
+ * @return The number of characters printed.
+ */
 
 int	ft_printf(char const *str, ...)
 {
