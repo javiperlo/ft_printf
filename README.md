@@ -12,7 +12,6 @@
 > _El objetivo de este proyecto es bastante sencillo. Deberás reprogramar printf(). Aprenderás, principalmente, a utilizar un número variable de argumentos._
 
 
-[**SUBJECT**]: https://github.com/Surfi89/42cursus/tree/main/Subject%20PDFs
 [**EMOJIS**]: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 Para más información sobre el proyecto: [**SUBJECT**]
 
