@@ -6,7 +6,7 @@
 #    By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 14:04:28 by javperez          #+#    #+#              #
-#    Updated: 2023/11/08 11:16:38 by javperez         ###   ########.fr        #
+#    Updated: 2023/11/08 11:26:47 by javperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,11 @@ all:		$(NAME)
 $(NAME):	$(LIBFT) $(OBJS)
 				$(CP) $(LIBFT) $(NAME)
 				$(AR) $(NAME) $(OBJS)
-			
+
+# Esto significa que el makefile ejecutará otro makefile en el
+# -C (Change directory)
+# directorio $(LIBFT_DIR) para construir la biblioteca.
+
 $(LIBFT):	$(LIBFT_DIR)
 				@$(MAKE) -C $(LIBFT_DIR)
 
@@ -45,13 +49,13 @@ $(LIBFT):	$(LIBFT_DIR)
 				@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				@$(MAKE) clean -C $(LIBFT_DIR)
-				@$(RM) $(OBJS)
+			@$(MAKE) clean -C $(LIBFT_DIR)
+			@$(RM) $(OBJS)
 
 fclean:		clean
-				@$(MAKE) fclean -C $(LIBFT_DIR)
-				@$(RM) $(NAME)
+			@$(MAKE) fclean -C $(LIBFT_DIR)
+			@$(RM) $(NAME)
 
-re:				fclean all
+re:			fclean all
 
 .PHONY:		all clean fclean re
