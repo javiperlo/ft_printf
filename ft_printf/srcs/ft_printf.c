@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:50:23 by javperez          #+#    #+#             */
-/*   Updated: 2023/11/08 11:15:34 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:36:27 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@
  * @param ap - A va_list containing the variable arguments.
  * @return The number of characters processed.
  */
-
+// Si no funciona es por que le falta el casteo (long) desde d hasta i
+// Comprobar en 42
 int	typeof_element(char type, va_list ap)
 {
 	int	count;
@@ -33,15 +34,15 @@ int	typeof_element(char type, va_list ap)
 	else if (type == 's')
 		count += ft_putstr(va_arg(ap, char *));
 	else if (type == 'd')
-		count += ft_putdigitx((long)va_arg(ap, int), 10);
+		count += ft_putdigitx(va_arg(ap, int), 10);
 	else if (type == 'u')
-		count += ft_putdigitx((long)va_arg(ap, unsigned int), 10);
+		count += ft_putdigitx(va_arg(ap, unsigned int), 10);
 	else if (type == 'x')
-		count += ft_putdigitx((long)va_arg(ap, unsigned int), 16);
+		count += ft_putdigitx(va_arg(ap, unsigned int), 16);
 	else if (type == 'X')
-		count += ft_putdigit_mayuscx((long)va_arg(ap, unsigned int), 16);
+		count += ft_putdigit_mayuscx(va_arg(ap, unsigned int), 16);
 	else if (type == 'i')
-		count += ft_putdigitx((long)(va_arg(ap, int)), 10);
+		count += ft_putdigitx((va_arg(ap, int)), 10);
 	else if (type == 'p')
 		count += ft_putpoi(va_arg(ap, unsigned long));
 	else
