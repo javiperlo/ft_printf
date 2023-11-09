@@ -2,7 +2,7 @@
 	:frog: Ft_printf
 </h1>
 <p align="center">
-	<b><i>Porque putnbr() y putstr() no son suficientes?</i></b><br>
+	<b><i>¿Porque putnbr() y putstr() no son suficientes?</i></b><br>
 </p>
 
 ---
