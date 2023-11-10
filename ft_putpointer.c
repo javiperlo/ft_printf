@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 19:03:55 by javperez          #+#    #+#             */
-/*   Updated: 2023/11/08 11:29:24 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:48:28 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,9 @@ int	ft_putpointer(unsigned long num)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd(num + 48, 1);
+			ft_putchar(num + 48);
 		else
-			ft_putchar_fd(num - 10 + 'a', 1);
+			ft_putchar(num - 10 + 'a');
 	}
 	return (ft_countpoi(num));
 }

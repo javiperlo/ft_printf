@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/24 13:03:11 by javperez          #+#    #+#             */
-/*   Updated: 2023/09/25 13:05:36 by javperez         ###   ########.fr       */
+/*   Created: 2023/09/30 17:37:17 by javperez          #+#    #+#             */
+/*   Updated: 2023/11/10 18:43:47 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_lstsize(t_list *lst)
+/**
+ * ft_putchar - Print a character
+ *
+ * This function writes a single character to the standard output using write()
+ *
+ * @param c - The character to be printed.
+ * @return The number of characters written (always 1).
+ */
+
+int	ft_putchar(int c)
 {
-	int		i;
-
-	i = 0;
-	while (lst != NULL)
-	{
-		lst = lst -> next;
-		i ++;
-	}
-	return (i);
+	write (1, &c, 1);
+	return (1);
 }
-/*
-int	main(void)
-{
-	int		i;
-	
-	t_list *lst = ft_lstnew((int *)42);
-    lst->next = ft_lstnew((int *)24);
-    lst->next -> next = ft_lstnew((int *)24);
-    lst->next->next -> next = NULL;
-	i = ft_lstsize(lst);
-	printf("El tamaño de la lista es: %d\n", i);
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:41:46 by javperez          #+#    #+#             */
-/*   Updated: 2023/11/08 11:29:46 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:41:38 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_putstr(char *str)
 	}
 	while (*str)
 	{
-		ft_putchar_fd(*str, 1);
+		ft_putchar(*str);
 		count++;
 		str++;
 	}

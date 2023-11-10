@@ -6,7 +6,7 @@
 /*   By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 17:39:09 by javperez          #+#    #+#             */
-/*   Updated: 2023/11/04 13:55:12 by javperez         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:43:43 by javperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <string.h>
 # include <strings.h>
 # include <stdlib.h>
-# include "../libft/libft.h"
 
 int		ft_putchar(int c);
 int		ft_putstr(char *str);

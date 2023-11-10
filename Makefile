@@ -5,17 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: javperez <javperez@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/02 14:04:28 by javperez          #+#    #+#              #
-#    Updated: 2023/11/08 11:27:12 by javperez         ###   ########.fr        #
+#    Created: 2023/11/10 18:44:17 by javperez          #+#    #+#              #
+#    Updated: 2023/11/10 18:54:30 by javperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
-
-LIBFT		= ./libft/libft.a
-LIBFT_DIR	= ./libft
-
-SRC			= ./srcs
 
 PRINTF_SRCS	= ft_printf.c \
 				ft_putchar.c \
@@ -30,31 +25,20 @@ CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 AR			= ar rcs
 RM			= rm -f
-CP			= cp
 
 all:		$(NAME)
 
-$(NAME):	$(LIBFT) $(OBJS)
-				$(CP) $(LIBFT) $(NAME)
+$(NAME):	$(OBJS)
 				$(AR) $(NAME) $(OBJS)
 
-# Esto significa que el makefile ejecutará otro makefile en el
-# -C (Change directory)
-# directorio $(LIBFT_DIR) para construir la biblioteca.
-
-$(LIBFT):	$(LIBFT_DIR)
-				@$(MAKE) -C $(LIBFT_DIR)
-
-%.o: 		$(SRC)/%.c 
-				@$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.c
+	$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-			@$(MAKE) clean -C $(LIBFT_DIR)
 			@$(RM) $(OBJS)
 
-fclean:		clean
-			@$(MAKE) fclean -C $(LIBFT_DIR)
-			@$(RM) $(NAME)
+fclean:		
+			@$(RM) $(NAME)	$(OBJS)
 
 re:			fclean all
 
