@@ -7,6 +7,11 @@
 
 ---
 
+# <div align="center">📚 ft_printf 100/100:white_check_mark:</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/byaliego/42-project-badges/main/badges/libftm.png" alt="Libftm Badge">
+</p>
+
 ## :dart: Sobre el proyecto
 
 > _El objetivo de este proyecto es bastante sencillo. Deberás reprogramar printf(). Aprenderás, principalmente, a utilizar un número variable de argumentos._
