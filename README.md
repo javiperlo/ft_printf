@@ -5,7 +5,7 @@
 
 ## 📝 Resumen
 
-Este proyecto consiste en programar una librería en C. Tu librería tendrá un montón de funciones de propósito general en las que se apoyarán tus programas. 👨‍💻
+El objetivo de este proyecto es bastante sencillo. Deberás reprogramar printf(). Aprenderás, principalmente, a utilizar un número variable de argumentos. 👨‍💻
 
 ## 🚀 Objetivos
 - Crear una librería en C reutilizable.
