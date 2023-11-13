@@ -1,13 +1,16 @@
 <h1 align="center">
 	:frog: Ft_printf
 </h1>
-<p align="center">
-	<b><i>¿¿Porque putnbr() y putstr() no son suficientes?</i></b><br>
-</p>
+
 
 ---
 
 # <div align="center">📚 ft_printf 100/100:white_check_mark:</div>
+
+<p align="center">
+	<b><i>¿¿Porque putnbr() y putstr() no son suficientes?</i></b><br>
+</p>
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/byaliego/42-project-badges/main/badges/libftm.png" alt="Libftm Badge">
 </p>
