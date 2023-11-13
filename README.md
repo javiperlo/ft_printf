@@ -23,9 +23,4 @@ Este proyecto consiste en replicar el funcionamiento de la función original de 
 | **%X** | Imprime un número hexadecimal (base 16) en mayúsculas.                				|
 | **%%** | Imprime el símbolo del porcentaje.                 											|
 
-Prototipo de la función:
-
-```C
-int ft_printf(char const *s, ...);
-```
 
