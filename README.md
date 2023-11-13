@@ -7,7 +7,7 @@
 
 El objetivo de este proyecto es bastante sencillo. Deberás reprogramar printf(). Aprenderás, principalmente, a utilizar un número variable de argumentos. 👨‍💻
 
-## ⚡Descripción 
+##⚡Descripción 
 
 Este proyecto consiste en replicar el funcionamiento de la función original de printf. 
 
