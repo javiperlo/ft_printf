@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/byaliego/42-project-badges/main/badges/libftm.png" alt="Libftm Badge">
+  <img src="https://github.com/byaliego/42-project-badges/blob/main/badges/ft_printfe.png" alt="Libftm Badge">
 </p>
 
 ## :dart: Sobre el proyecto
