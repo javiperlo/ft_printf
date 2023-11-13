@@ -1,10 +1,3 @@
-<h1 align="center">
-	:frog: Ft_printf
-</h1>
-
-
----
-
 # <div align="center">📚 ft_printf 100/100:white_check_mark:</div>
 
 <p align="center">
